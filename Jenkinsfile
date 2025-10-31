@@ -8,14 +8,14 @@ pipeline {
     // Tools block automatically installs/configures Node.js based on the name 
     // configured in 'Manage Jenkins' -> 'Tools' -> 'NodeJs Installations'.
     tools {
-        // IMPORTANT: Replace 'nodejs25' with your actual Jenkins Node.js configuration name
-        nodejs 'nodejs25'
+        // IMPORTANT: Replace 'nodejs18' with your actual Jenkins Node.js configuration name
+        nodejs 'nodejs18'
     }
 
     // Environment variables (optional)
     environment {
         // Set the path for npm to install local dependencies correctly
-        PATH = "${tool 'nodejs25'}/bin:${env.PATH}" 
+        PATH = "${tool 'nodejs18'}/bin:${env.PATH}" 
     }
 
     // 2. STAGES DEFINITION
@@ -103,3 +103,4 @@ pipeline {
     }
 
 }
+
